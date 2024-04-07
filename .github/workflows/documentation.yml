@@ -13,7 +13,7 @@ jobs:
       - uses: actions/setup-python@v3
       - name: Install dependencies
         run: |
-          pip install sphinx sphinx-book-theme myst_parser linkify-it-py
+          pip install sphinx sphinx-book-theme myst_parser linkify-it-py sphinx-tabs sphinxcontrib-mermaid
       - name: Sphinx build
         run: |
           sphinx-build doc _build
