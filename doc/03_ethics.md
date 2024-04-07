@@ -5,17 +5,15 @@ Conducting neuroimaging research, as with many forms of scientific inquiry invol
 The application should provide a detailed account of your research aims, methodologies, data handling procedures, and potential risks to participants. Ensuring clarity and comprehensiveness in this submission will streamline the approval process and facilitate constructive feedback from the ethics committee.
 
 
-::::{tab-set}
-:::{tab-item} Tab 1
-:sync: tab1
-Tab one
-:::
-:::{tab-item} Tab 2
-:sync: tab2
-Tab two
-:::
+```{tabs}
+   ~~~{tab} Apples
+   Apples are green, or sometimes red.
+   ~~~
+   ~~~{tab} Pears
+   Pears are green.
+   ~~~
+``` 
 
-::::
 
 
 ```{toctree}
