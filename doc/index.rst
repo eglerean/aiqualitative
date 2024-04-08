@@ -11,6 +11,7 @@ Author: Enrico Glerean
 Coauthor: ...you! Get in touch to help writing this handbook.
 
 .. image:: img/AIforqual_large.png
+   :width: 450px
    :alt: A logo for the handbook
 
 .. toctree::
