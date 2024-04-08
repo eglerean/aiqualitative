@@ -10,10 +10,13 @@ Structure
 
 The book follos the structure of the typical research lifecycle:
 
-   1. Plan: design your data collection, draft the analysis plan
-   2.  Collect: collect your data
-   3.  Process: pre-process your data so that it can be analysed effectively
+   1. Plan: design your data collection, draft the analysis plan.
+   2. Collect: collect your data.
+   3. Process: pre-process your data so that it can be analysed effectively
    4. Analyse: apply different qualitative analysis methods.
+   5. Preserve: archive the project and its data.
+   6. Share: share your data and your research. Make the data and other materials FAIR (Findable, Accessible, Interoperable, Reusable)
+   7. Reuse: discover new data and content for reuse
 
 
 .. mermaid::
