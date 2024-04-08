@@ -2,7 +2,9 @@
 
 ## What is GenAI? How does it work?
 
-This section needs expanding. It can reuse the content of one of our past staff training's events https://zenodo.org/records/10890289
+This section needs expanding. It can reuse the content of one of our past staff training's events:
+
+> Glerean, E., & Silva, P. E. S. (2024, March 28). Artificial Intelligence and Research Work. Zenodo. https://doi.org/10.5281/zenodo.10890289
 
 
 
