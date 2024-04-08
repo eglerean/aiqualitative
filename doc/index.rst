@@ -19,9 +19,8 @@ Coauthor: ...you! Get in touch to help writing this handbook.
    :numbered: 
    :caption: Contents:
 
-   01_about.rst
-   01_prereg.md
-   02_privacynotice.md
+   01_about.md
+   02_background.md
    03_ethics.md
 
 
