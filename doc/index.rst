@@ -21,7 +21,10 @@ Coauthor: ...you! Get in touch to help writing this handbook.
 
    01_about.md
    02_background.md
-   03_ethics.md
+   03_plan.md
+   04_collect.md
+   05_process.md
+   ethicsandlaw.md
 
 
 Indices and tables
