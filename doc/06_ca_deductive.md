@@ -1,0 +1,22 @@
+# Content analysis with deductive coding
+
+:::{warning}
+This page needs expanding on the background of the method. For now it jumps directly into an example
+:::
+
+```{admonition} Survey data for this example
+:class: toggle
+| Name Surname	| Background of the Individual: Age, Occupation, Sex, Self Description of How Their Personality Is	| Answer to Question 1	| Answer to Question 2 |
+| --- | --- | --- | --- |
+| John Doe	| 53, Accountant, Male, Introverted and analytical	| "I found the movie quite touching, especially the scenes involving Forrest's childhood. It wasn't my first time seeing it, but the emotional impact remains strong. I particularly connected with the protagonist's perseverance."	| "The eye-tracking device was a bit distracting at first, but I got used to it. It didn't significantly alter my viewing experience." | 
+| Emily Stone	| 22, University Student, Female, Extroverted and enjoys comedy	| "This was my first time watching "Forrest Gump." I thought it would be purely comedic, but it was surprisingly emotional too. I laughed a lot, especially during Forrest's accidental achievements."	| "I found the device comfortable enough, though I was aware of it during funny scenes which made me lose focus occasionally." | 
+| Michael Rivera	| 28, Graduate Student, Male, Cynical and prefers intense dramas	| "I've seen the movie several times. It feels a bit slow and predictable at this point. However, the historical references are interesting."	| "The device was fine. I hardly noticed it after a while, which allowed me to focus more on the details of the film." | 
+| Lisa Chang	| 50, Nurse, Female, Empathetic and values emotional storytelling	| "I've always found 'Forrest Gump' deeply moving. The movie's exploration of destiny and love always brings me to tears, especially the scenes with Jenny."	| "The eye-tracking device was slightly uncomfortable at the beginning, but it didn’t detract from the powerful moments of the movie." | 
+| Alex Johnson	| 19, University Student, Male, Enjoys fast-paced movies, first-time viewer	| "I thought the movie would be boring but was pleasantly surprised by its depth and the complexity of Forrest's character. It was funny, but also made me think."	| "Using the eye-tracking device was interesting. It felt a bit weird at first, but it didn't bother me much as the movie went on." | 
+| Sarah Bennett	| 32, Marketing Manager, Female, Creative and empathetic	| "Watching 'Forrest Gump' always brings a mix of laughter and tears. The narrative complexity and emotional depth resonate with me every time, especially Forrest's unwavering kindness."	| "The eye-tracking device was slightly intrusive initially, but I forgot about it once I got absorbed in the story." | 
+| Darren Smith	| 45, Engineer, Male, Pragmatic and reserved	| "I've seen 'Forrest Gump' multiple times. It's a fine movie, though not my favorite. I appreciate the technical execution and historical context more than the emotional aspects."	| "The device was comfortable and didn't interfere with my viewing experience, allowing me to appreciate the cinematography." | 
+| Olivia Martinez	| 27, PhD Candidate, Female, Analytical and introverted	| "This was my first viewing of the movie. The emotional arcs were engaging, and I enjoyed analyzing the lead character's development throughout the different eras."	| "I was aware of the eye-tracking device at all times, which made me somewhat conscious of how often my gaze shifted during intense scenes." | 
+| Ethan Wright	| 35, Freelance Writer, Male, Thoughtful and enjoys drama	|  "Forrest Gump is a movie that I find humorously tragic. The stark contrast between the protagonist's simplicity and the complex events around him is striking. It was enjoyable revisiting it."	|  "The device was a minor distraction initially, but it became less noticeable as the movie progressed." | 
+| Grace Kim	| 24, University Student, Female, Curious and loves exploring different genres	|  "I hadn't watched 'Forrest Gump' before. It was fascinating to see a character go through so many historical events. The blend of humor and drama was captivating."	| "I found the eye-tracking device intriguing to use. It was a bit uncomfortable at first, but it added an experimental aspect to my movie experience."| 
+
+```
