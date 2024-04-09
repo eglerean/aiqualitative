@@ -18,7 +18,7 @@
 # -- Project information -----------------------------------------------------
 
 project = 'AI for Qualitative Data Analysis'
-copyright = '2024, Enrico Glerean'
+copyright = '2024, Enrico Glerean. Book is distributed under CC-BY-SA license.'
 author = 'Enrico Glerean'
 
 
