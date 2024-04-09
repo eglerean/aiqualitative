@@ -16,6 +16,11 @@ The book follos the structure of the typical research lifecycle:
    > 6. Share: share your data and your research. Make the data and other materials FAIR (Findable, Accessible, Interoperable, Reusable)
    > 7. Reuse: discover new data and content for reuse
 
+:::{admonition} Work in progress!
+:class: warning
+
+Please note that section 5, 6, and 7 are currently missing in the handbook. Join as a coauthor!
+:::
 
 ## Types of qualitative data
 
