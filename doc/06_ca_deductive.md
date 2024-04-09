@@ -153,3 +153,8 @@ Rather than immediately asking to analyise the data, I first make sure that it k
 >     
 > 
 > This structured approach to frequency analysis and cross-tabulation provides a clear way to understand the impact of the eye-tracking device on participants' movie-watching experiences, aligned with their emotional reactions.
+
+
+## Summary
+
+We saw how ChatGPT worked with content analysis. This was ok for the small amount of data we have in our study, but if we have thousands of responses, it would have been much more cumbersome to work with the data and we might reach the limitation of the "window" of ChatGPT, i.e. how much of the conversation the model can keep in its memory. In the tools section we mention some ways to overcome this.
