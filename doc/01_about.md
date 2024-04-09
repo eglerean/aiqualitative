@@ -6,7 +6,7 @@ This handbook describes some examples of working with qualitative data and AI, b
 
 ## Structure
 
-The book follos the structure of the typical research lifecycle:
+The book follows the structure of the typical research lifecycle:
 
    > 1. Plan: design your data collection, draft the analysis plan.
    > 2. Collect: collect your data.
@@ -15,6 +15,13 @@ The book follos the structure of the typical research lifecycle:
    > 5. Preserve: archive the project and its data.
    > 6. Share: share your data and your research. Make the data and other materials FAIR (Findable, Accessible, Interoperable, Reusable)
    > 7. Reuse: discover new data and content for reuse
+
+
+```{figure} https://rdmkit.elixir-europe.org/images/data_life_cycle_9.png
+:width: 300px
+:alt: RDMKIT research data lifecycle
+```
+
 
 :::{admonition} Work in progress!
 :class: warning

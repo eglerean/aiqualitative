@@ -25,6 +25,7 @@ Coauthor: ...you! Get in touch to help writing this handbook.
    04_collect.md
    05_process.md
    06_analyse.md
+   07_fair.md
    ethicsandlaw.md
 
 
