@@ -8,4 +8,6 @@ git clone git@github.com:YOURUSERNAME/aiqualitative.git
 # create the conda environment
 conda env create -f environment.yaml -p ./env
 source activate aiqual_docs
+cd doc
+sphnix-build . _build
 ```
