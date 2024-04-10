@@ -26,7 +26,10 @@ Coauthor: ...you! Get in touch to help writing this handbook.
    05_process.md
    06_analyse.md
    07_fair.md
-   ethicsandlaw.md
+   08_ethicsandlaw.md
+   09_conclusions.md
+   10_contributing_guidelines.md
+
 
 
 Indices and tables
