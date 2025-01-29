@@ -1,0 +1,660 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="./" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>6.2. Content analysis with inductive coding &#8212; AI for Qualitatie Data Analysis</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  <!--
+    this give us a css class that will be invisible only if js is disabled
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=8f2a1f02" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=a3416100" />
+    <link rel="stylesheet" type="text/css" href="_static/css/tweaks.css?v=822f5895" />
+  
+  <!-- So that users can add custom icons -->
+  <script src="_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
+
+    <script src="_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="_static/doctools.js?v=9bcbadda"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = '06_ca_inductive';</script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="6.3. Tools and more advanced techniques for qualitative data analysis with AI" href="06_tools.html" />
+    <link rel="prev" title="6.1. Content analysis with deductive coding" href="06_ca_deductive.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:version" content="" />
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <dialog id="pst-search-dialog">
+    
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         placeholder="Search..."
+         aria-label="Search..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form>
+  </dialog>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+<aside class="bd-header-announcement" aria-label="Announcement">
+  <div class="bd-header-announcement__content">⚠️Work in progress! Help me!⚠️</div>
+</aside>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="index.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="_static/AIforqual.png" class="logo__image only-light" alt="AI for Qualitatie Data Analysis - Home"/>
+    <img src="_static/AIforqual.png" class="logo__image only-dark pst-js-only" alt="AI for Qualitatie Data Analysis - Home"/>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="01_about.html">1. How to use this handboox</a></li>
+<li class="toctree-l1"><a class="reference internal" href="02_background.html">2. Background</a></li>
+<li class="toctree-l1"><a class="reference internal" href="03_plan.html">3. Planning your research</a></li>
+<li class="toctree-l1"><a class="reference internal" href="04_collect.html">4. Data collection</a></li>
+<li class="toctree-l1"><a class="reference internal" href="05_process.html">5. Data pre-processing</a></li>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="06_analyse.html">6. Analyse qualitative data</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="06_ca_deductive.html">6.1. Content analysis with deductive coding</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">6.2. Content analysis with inductive coding</a></li>
+<li class="toctree-l2"><a class="reference internal" href="06_tools.html">6.3. Tools and more advanced techniques for qualitative data analysis with AI</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1"><a class="reference internal" href="07_fair.html">7. FAIR! Preserve, Share, Reuse</a></li>
+<li class="toctree-l1"><a class="reference internal" href="08_ethicsandlaw.html">8. Ethics and Law</a></li>
+<li class="toctree-l1"><a class="reference internal" href="09_conclusions.html">9. Conclusions and next steps</a></li>
+<li class="toctree-l1"><a class="reference internal" href="10_contributing_guidelines.html">10. Contributing and community guidelines</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+      <div class="sidebar-primary-item">
+<div id="ethical-ad-placement"
+      class="flat"
+      data-ea-publisher="readthedocs"
+      data-ea-type="readthedocs-sidebar"
+      data-ea-manual="true">
+</div></div>
+  </div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/eglerean/aiqualitative/blob/main/doc/06_ca_inductive.md?plain=1" target="_blank"
+   class="btn btn-sm btn-source-file-button dropdown-item"
+   title="Show source"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-code"></i>
+  </span>
+<span class="btn__text-container">Show source</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/eglerean/aiqualitative/edit/main/doc/06_ca_inductive.md" target="_blank"
+   class="btn btn-sm btn-source-edit-button dropdown-item"
+   title="Suggest edit"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-pencil-alt"></i>
+  </span>
+<span class="btn__text-container">Suggest edit</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/eglerean/aiqualitative/issues/new?title=Issue%20on%20page%20%2F06_ca_inductive.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="_sources/06_ca_inductive.md" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.md</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button>
+
+
+<button class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+</button>
+
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Content analysis with inductive coding</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="content-analysis-with-inductive-coding">
+<h1><span class="section-number">6.2. </span>Content analysis with inductive coding<a class="headerlink" href="#content-analysis-with-inductive-coding" title="Link to this heading">#</a></h1>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>This page needs expanding on the background of the method. For now it jumps directly into an example</p>
+</div>
+<div class="dropdown admonition">
+<p class="admonition-title">Survey data for this example</p>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Name Surname</p></th>
+<th class="head"><p>Background of the Individual: Age, Occupation, Sex, Self Description of How Their Personality Is</p></th>
+<th class="head"><p>Answer to Question 1</p></th>
+<th class="head"><p>Answer to Question 2</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>John Doe</p></td>
+<td><p>53, Accountant, Male, Introverted and analytical</p></td>
+<td><p>“I found the movie quite touching, especially the scenes involving Forrest’s childhood. It wasn’t my first time seeing it, but the emotional impact remains strong. I particularly connected with the protagonist’s perseverance.”</p></td>
+<td><p>“The eye-tracking device was a bit distracting at first, but I got used to it. It didn’t significantly alter my viewing experience.”</p></td>
+</tr>
+<tr class="row-odd"><td><p>Emily Stone</p></td>
+<td><p>22, University Student, Female, Extroverted and enjoys comedy</p></td>
+<td><p>“This was my first time watching “Forrest Gump.” I thought it would be purely comedic, but it was surprisingly emotional too. I laughed a lot, especially during Forrest’s accidental achievements.”</p></td>
+<td><p>“I found the device comfortable enough, though I was aware of it during funny scenes which made me lose focus occasionally.”</p></td>
+</tr>
+<tr class="row-even"><td><p>Michael Rivera</p></td>
+<td><p>28, Graduate Student, Male, Cynical and prefers intense dramas</p></td>
+<td><p>“I’ve seen the movie several times. It feels a bit slow and predictable at this point. However, the historical references are interesting.”</p></td>
+<td><p>“The device was fine. I hardly noticed it after a while, which allowed me to focus more on the details of the film.”</p></td>
+</tr>
+<tr class="row-odd"><td><p>Lisa Chang</p></td>
+<td><p>50, Nurse, Female, Empathetic and values emotional storytelling</p></td>
+<td><p>“I’ve always found ‘Forrest Gump’ deeply moving. The movie’s exploration of destiny and love always brings me to tears, especially the scenes with Jenny.”</p></td>
+<td><p>“The eye-tracking device was slightly uncomfortable at the beginning, but it didn’t detract from the powerful moments of the movie.”</p></td>
+</tr>
+<tr class="row-even"><td><p>Alex Johnson</p></td>
+<td><p>19, University Student, Male, Enjoys fast-paced movies, first-time viewer</p></td>
+<td><p>“I thought the movie would be boring but was pleasantly surprised by its depth and the complexity of Forrest’s character. It was funny, but also made me think.”</p></td>
+<td><p>“Using the eye-tracking device was interesting. It felt a bit weird at first, but it didn’t bother me much as the movie went on.”</p></td>
+</tr>
+<tr class="row-odd"><td><p>Sarah Bennett</p></td>
+<td><p>32, Marketing Manager, Female, Creative and empathetic</p></td>
+<td><p>“Watching ‘Forrest Gump’ always brings a mix of laughter and tears. The narrative complexity and emotional depth resonate with me every time, especially Forrest’s unwavering kindness.”</p></td>
+<td><p>“The eye-tracking device was slightly intrusive initially, but I forgot about it once I got absorbed in the story.”</p></td>
+</tr>
+<tr class="row-even"><td><p>Darren Smith</p></td>
+<td><p>45, Engineer, Male, Pragmatic and reserved</p></td>
+<td><p>“I’ve seen ‘Forrest Gump’ multiple times. It’s a fine movie, though not my favorite. I appreciate the technical execution and historical context more than the emotional aspects.”</p></td>
+<td><p>“The device was comfortable and didn’t interfere with my viewing experience, allowing me to appreciate the cinematography.”</p></td>
+</tr>
+<tr class="row-odd"><td><p>Olivia Martinez</p></td>
+<td><p>27, PhD Candidate, Female, Analytical and introverted</p></td>
+<td><p>“This was my first viewing of the movie. The emotional arcs were engaging, and I enjoyed analyzing the lead character’s development throughout the different eras.”</p></td>
+<td><p>“I was aware of the eye-tracking device at all times, which made me somewhat conscious of how often my gaze shifted during intense scenes.”</p></td>
+</tr>
+<tr class="row-even"><td><p>Ethan Wright</p></td>
+<td><p>35, Freelance Writer, Male, Thoughtful and enjoys drama</p></td>
+<td><p>“Forrest Gump is a movie that I find humorously tragic. The stark contrast between the protagonist’s simplicity and the complex events around him is striking. It was enjoyable revisiting it.”</p></td>
+<td><p>“The device was a minor distraction initially, but it became less noticeable as the movie progressed.”</p></td>
+</tr>
+<tr class="row-odd"><td><p>Grace Kim</p></td>
+<td><p>24, University Student, Female, Curious and loves exploring different genres</p></td>
+<td><p>“I hadn’t watched ‘Forrest Gump’ before. It was fascinating to see a character go through so many historical events. The blend of humor and drama was captivating.”</p></td>
+<td><p>“I found the eye-tracking device intriguing to use. It was a bit uncomfortable at first, but it added an experimental aspect to my movie experience.”</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<p>Using ChatGPT, we paste the data and we want to make sure that the context is clear. It is good to ask for some questions. For example</p>
+<blockquote>
+<div><p><strong>You</strong>
+You are a helpful research assistant expert in content analysis for qualitative research. I have collected survey data and I am pasting here as a table in text format.
+– Here goes the table above –
+Do you think these data in the table could be used for inductive coding?</p>
+</div></blockquote>
+<blockquote>
+<div><p><strong>ChatGPT</strong>
+Yes, the data in the tables can certainly be used for inductive coding. Inductive coding is a qualitative data analysis method where themes and categories are derived directly from the data itself, without any preconceived structure or framework. This method is particularly suited for exploring varied and nuanced perspectives, as provided in your synthetic interview data.</p>
+<p>Here’s how the data you’ve gathered aligns with the process of inductive coding:</p>
+<p><em>…omitted…</em></p>
+</div></blockquote>
+<p>We are now sure that ChatGPT knows what we are talking about. We can now ask for the analysis to start.</p>
+<blockquote>
+<div><p><strong>You</strong>
+Now perform inductive coding on the table for the 10 subjects.</p>
+</div></blockquote>
+<blockquote>
+<div><p><strong>ChatGPT</strong>
+Inductive coding involves reviewing the qualitative data, identifying patterns, and developing categories based on these observations. Here, I’ll perform a basic inductive coding process using the responses from the 10 subjects provided in the tables regarding their experiences watching “Forrest Gump” with an eye-tracking device.</p>
+<p><strong>Step-by-Step Inductive Coding Process:</strong></p>
+<ol class="arabic simple">
+<li><p><strong>Initial Reading</strong>: Review all data to gain a holistic understanding.</p></li>
+<li><p><strong>Coding</strong>: Identify specific words, phrases, or sentiments that stand out and assign initial codes.</p></li>
+<li><p><strong>Searching for Themes</strong>: Group similar codes to form potential themes.</p></li>
+<li><p><strong>Reviewing Themes</strong>: Check if themes work in relation to the coded extracts and the entire data set.</p></li>
+<li><p><strong>Defining and Naming Themes</strong>: Develop specific definitions for each theme.</p></li>
+</ol>
+<p><strong>Coding the Data:</strong>
+Based on the participants’ answers about their emotional experience with the movie and their experience with the eye-tracking device, I’ll generate initial codes and propose potential themes.</p>
+<p>Emotional Responses to the Movie (Question 1):</p>
+<ul class="simple">
+<li><p>Humor and Surprised Engagement: Emily, Alex (first-time watchers who expected boredom but found humor and depth).</p></li>
+<li><p>Emotional Depth and Repeat Value: John, Lisa (repeat watchers who focus on emotional aspects and find new depth in repeat viewings).</p></li>
+<li><p>Historical Interest: Michael (appreciates the historical context, finds the plot predictable).</p></li>
+<li><p>Complex Narrative Engagement: Olivia (first-time watcher analyzing character development).</p></li>
+<li><p>Tragicomic Perception: Ethan (finds the blend of tragedy and comedy appealing).</p></li>
+</ul>
+<p>Experience Using the Eye-Tracking Device (Question 2):</p>
+<ul class="simple">
+<li><p>Adaptability and Minor Distraction: John, Darren, Ethan (noticed the device initially but adapted quickly).</p></li>
+<li><p>Initial Intrusion but Forgotten: Sarah (found it intrusive but got used to it).</p></li>
+<li><p>Constant Awareness: Olivia (remained constantly aware, which affected viewing).</p></li>
+<li><p>Comfort Issues but Interesting: Alex, Grace (uncomfortable at first but found the technological aspect intriguing).</p></li>
+<li><p>Comfort and Distraction Issues: Emily (comfortable but distracted during humorous scenes).</p></li>
+</ul>
+<p><strong>Proposed Themes:</strong>
+From these initial codes, we can develop the following themes:</p>
+<p><strong>For Emotional Responses to “Forrest Gump”:</strong></p>
+<ul class="simple">
+<li><p><strong>Varied Emotional Engagement:</strong> Different levels of engagement (humor, emotional depth, historical context) reflect personal and prior exposure influences.</p></li>
+<li><p><strong>Complexity in Simplicity:</strong> Viewers find layers of complexity within what appears to be a straightforward story, often colored by their own life experiences and expectations.</p></li>
+</ul>
+<p><strong>For Experience with the Eye-Tracking Device:</strong></p>
+<ul class="simple">
+<li><p><strong>Technological Adaptation and Distraction:</strong> Users’ adaptation to the technology varies, with some finding it a minor distraction that they quickly overcome, while others remain aware of its presence throughout.</p></li>
+<li><p><strong>Technological Novelty and Comfort:</strong> The novelty of the technology provides an additional layer of interest, although comfort issues are common but typically transient.</p></li>
+</ul>
+<p><strong>Conclusion:</strong>
+These themes provide a structured way to understand the complex data set. They capture the main elements of the viewers’ experiences with the movie and the eye-tracking device, and can be used to further explore the impact of such technologies on cinematic experiences, as well as variations in individual viewer engagement with media. This exercise in inductive coding is fundamental for qualitative research, helping to structure unstructured data into coherent themes that can inform deeper analysis and understanding.</p>
+</div></blockquote>
+<p>Did ChatGPT do a good job? ChatGPT is the junior assistant who did some task for you, but you are the expert to evaluate its output. If you think this is reasonable, if you think this is what you have also done, then you could ask to store the result in a table format for further analysis.</p>
+<blockquote>
+<div><p><strong>You</strong>
+Would it be appropriate to now create a table with one row for each of the 10 subjects and mark the results of the inductive coding process? Or is the goal of  inductive coding to be more at the summary level of all subjects like you wrote here above?</p>
+</div></blockquote>
+<blockquote>
+<div><p><strong>ChatGPT</strong>
+<em>…snip from the result…</em>
+** Example Table (Simplified for Illustration):**</p>
+</div></blockquote>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Name Surname</p></th>
+<th class="head"><p>Initial Codes</p></th>
+<th class="head"><p>Themes</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>John Doe</p></td>
+<td><p>Emotional depth, adaptability</p></td>
+<td><p>Varied Emotional Engagement, Technological Adaptation and Distraction</p></td>
+</tr>
+<tr class="row-odd"><td><p>Emily Stone</p></td>
+<td><p>Humor, comfort issues</p></td>
+<td><p>Varied Emotional Engagement, Technological Novelty and Comfort</p></td>
+</tr>
+<tr class="row-even"><td><p>Michael Rivera</p></td>
+<td><p>Historical interest, adaptability</p></td>
+<td><p>Varied Emotional Engagement, Technological Adaptation and Distraction</p></td>
+</tr>
+<tr class="row-odd"><td><p>Lisa Chang</p></td>
+<td><p>Emotional depth, adaptability</p></td>
+<td><p>Varied Emotional Engagement, Technological Adaptation</p></td>
+</tr>
+<tr class="row-even"><td><p>Alex Johnson</p></td>
+<td><p>Surprised engagement, novelty interest</p></td>
+<td><p>Varied Emotional Engagement, Technological</p></td>
+</tr>
+<tr class="row-odd"><td><p>Sarah Bennett</p></td>
+<td><p>Emotional depth, initial intrusion</p></td>
+<td><p>Varied Emotional Engagement, Technological Adaptation and Distraction</p></td>
+</tr>
+<tr class="row-even"><td><p>Darren Smith</p></td>
+<td><p>Repeat value, adaptability</p></td>
+<td><p>Varied Emotional Engagement, Technological Adaptation and Distraction</p></td>
+</tr>
+<tr class="row-odd"><td><p>Olivia Martinez</p></td>
+<td><p>Narrative engagement, constant awareness</p></td>
+<td><p>Varied Emotional Engagement, Technological Adaptation and Distraction</p></td>
+</tr>
+<tr class="row-even"><td><p>Ethan Wright</p></td>
+<td><p>Tragicomic perception, adaptability</p></td>
+<td><p>Varied Emotional Engagement, Technological Adaptation and Distraction</p></td>
+</tr>
+<tr class="row-odd"><td><p>Grace Kim	Narrative engagement, novelty interest</p></td>
+<td><p>Varied Emotional Engagement, Technological Novelty and Comfort</p></td>
+<td><p></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>Now we could refine the themes by interacting more with ChatGPT, or continue offline for example by combining results without AI with the output generated by ChatGPT.</p>
+</section>
+
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="06_ca_deductive.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title"><span class="section-number">6.1. </span>Content analysis with deductive coding</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="06_tools.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title"><span class="section-number">6.3. </span>Tools and more advanced techniques for qualitative data analysis with AI</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Enrico Glerean
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2024, Enrico Glerean. Book is distributed under CC-BY-SA license..
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script defer src="_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf"></script>
+<script defer src="_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

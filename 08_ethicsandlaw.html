@@ -1,0 +1,597 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="./" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>8. Ethics and Law &#8212; AI for Qualitatie Data Analysis</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  <!--
+    this give us a css class that will be invisible only if js is disabled
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=8f2a1f02" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=a3416100" />
+    <link rel="stylesheet" type="text/css" href="_static/css/tweaks.css?v=822f5895" />
+  
+  <!-- So that users can add custom icons -->
+  <script src="_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
+
+    <script src="_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="_static/doctools.js?v=9bcbadda"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = '08_ethicsandlaw';</script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="9. Conclusions and next steps" href="09_conclusions.html" />
+    <link rel="prev" title="7. FAIR! Preserve, Share, Reuse" href="07_fair.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:version" content="" />
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <dialog id="pst-search-dialog">
+    
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         placeholder="Search..."
+         aria-label="Search..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form>
+  </dialog>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+<aside class="bd-header-announcement" aria-label="Announcement">
+  <div class="bd-header-announcement__content">⚠️Work in progress! Help me!⚠️</div>
+</aside>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="index.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="_static/AIforqual.png" class="logo__image only-light" alt="AI for Qualitatie Data Analysis - Home"/>
+    <img src="_static/AIforqual.png" class="logo__image only-dark pst-js-only" alt="AI for Qualitatie Data Analysis - Home"/>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="01_about.html">1. How to use this handboox</a></li>
+<li class="toctree-l1"><a class="reference internal" href="02_background.html">2. Background</a></li>
+<li class="toctree-l1"><a class="reference internal" href="03_plan.html">3. Planning your research</a></li>
+<li class="toctree-l1"><a class="reference internal" href="04_collect.html">4. Data collection</a></li>
+<li class="toctree-l1"><a class="reference internal" href="05_process.html">5. Data pre-processing</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="06_analyse.html">6. Analyse qualitative data</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="06_ca_deductive.html">6.1. Content analysis with deductive coding</a></li>
+<li class="toctree-l2"><a class="reference internal" href="06_ca_inductive.html">6.2. Content analysis with inductive coding</a></li>
+<li class="toctree-l2"><a class="reference internal" href="06_tools.html">6.3. Tools and more advanced techniques for qualitative data analysis with AI</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1"><a class="reference internal" href="07_fair.html">7. FAIR! Preserve, Share, Reuse</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">8. Ethics and Law</a></li>
+<li class="toctree-l1"><a class="reference internal" href="09_conclusions.html">9. Conclusions and next steps</a></li>
+<li class="toctree-l1"><a class="reference internal" href="10_contributing_guidelines.html">10. Contributing and community guidelines</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+      <div class="sidebar-primary-item">
+<div id="ethical-ad-placement"
+      class="flat"
+      data-ea-publisher="readthedocs"
+      data-ea-type="readthedocs-sidebar"
+      data-ea-manual="true">
+</div></div>
+  </div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/eglerean/aiqualitative/blob/main/doc/08_ethicsandlaw.md?plain=1" target="_blank"
+   class="btn btn-sm btn-source-file-button dropdown-item"
+   title="Show source"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-code"></i>
+  </span>
+<span class="btn__text-container">Show source</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/eglerean/aiqualitative/edit/main/doc/08_ethicsandlaw.md" target="_blank"
+   class="btn btn-sm btn-source-edit-button dropdown-item"
+   title="Suggest edit"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-pencil-alt"></i>
+  </span>
+<span class="btn__text-container">Suggest edit</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/eglerean/aiqualitative/issues/new?title=Issue%20on%20page%20%2F08_ethicsandlaw.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="_sources/08_ethicsandlaw.md" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.md</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button>
+
+
+<button class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+</button>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Ethics and Law</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#basics-of-information-security">8.1. Basics of information security</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#law-data-protection-and-cybersecurity">8.2. Law - Data protection and cybersecurity</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ethics">8.3. Ethics</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#research-ethics-the-principle-of-do-no-harm">8.3.1. Research ethics: the principle of <em>do no harm</em></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ethics-and-ideology">8.3.2. Ethics and ideology</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#training-data-ethics">8.3.2.1. Training data ethics</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#rlhf-the-hard-work-of-many-underpaid-individuals">8.3.2.2. RLHF: the hard work of many underpaid individuals</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ethics-and-research-integrity">8.3.3. Ethics and Research Integrity</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ethics-and-responsible-conduct-of-research">8.3.4. Ethics and responsible conduct of research</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#further-considerations-on-peer-review-and-publishing-genai-work">8.4. Further considerations on peer-review and publishing GenAI work</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="ethics-and-law">
+<h1><span class="section-number">8. </span>Ethics and Law<a class="headerlink" href="#ethics-and-law" title="Link to this heading">#</a></h1>
+<p>While adhering to the law is necessary, academic researchers hold the best standard when it comes to adhering to ethics at large: research ethics, research integrity, responsible conduct of research. In this chapter we first clarify the necessary role of law and then focus on the ethical implications of using such tools in academic research.</p>
+<section id="basics-of-information-security">
+<h2><span class="section-number">8.1. </span>Basics of information security<a class="headerlink" href="#basics-of-information-security" title="Link to this heading">#</a></h2>
+<p>In information security the CIA triad (Confidentiality, Integrity, Availability) is a very popular framework for technological system. In the rest of this chapter we will focus on the “C” (Confidentiality), i.e. making sure that only those who have the right to access the information are actually able to access it. Confidentiality is closely related with the concept of “Classification of Information”. At Aalto University we use four level of classification of information</p>
+<blockquote>
+<div><p><strong><a class="reference external" href="https://www.aalto.fi/en/information-processing/classification-of-information">Classification of information at Aalto University</a></strong></p>
+<ol class="arabic simple">
+<li><p>🟢 <strong>Public</strong>: data in the public domain (examples: simulated data, open teaching materials, open access publications, open source code). Note that with personal data, even public personal data should be treated as confidential in the context of research.</p></li>
+<li><p>🟡 <strong>Internal</strong>: Information not intended for publication (examples: work files, drafts, meeting notes)</p></li>
+<li><p>🔴 <strong>Confidential</strong>: Information with access limited according to law or contractual terms to authorised persons only. (examples: Research personal data, trade secrets)</p></li>
+<li><p>⚫ <strong>Secret</strong>: Information with access limited according to law or contractual terms to authorised persons only. Information that is meant to be secret and that would cause major damage if disclosed. (example: medical records obtained from a Findata application)</p></li>
+</ol>
+</div></blockquote>
+</section>
+<section id="law-data-protection-and-cybersecurity">
+<h2><span class="section-number">8.2. </span>Law - Data protection and cybersecurity<a class="headerlink" href="#law-data-protection-and-cybersecurity" title="Link to this heading">#</a></h2>
+<p>The first thing to consider relates to ensuring the confidentiality of the data you work with. It can be the confidentiality of your or others’ <strong>intellectual property</strong> or it can be the confidentiality of your or others’ <strong>personal data</strong>. The most frequent question that researchers have relates to the confidentiality of the systems we use: is my research data safe if I use OpenAI ChatGPT? Is it safe to use an open source language model like Mistral or Llama2?</p>
+<p>To evaluate the confidentiality (<em>security</em>) of the GenAI tools you use, it is important to understand the physical geography of such tools.</p>
+<p><strong>Insert here slide 28 from <a class="reference external" href="https://zenodo.org/records/10890289">https://zenodo.org/records/10890289</a></strong></p>
+<p><em>Insert here full description of the figure for those who are not attending the presentation.</em></p>
+<p>To sum up, with <a class="reference external" href="https://ai.aalto.fi">https://ai.aalto.fi</a>, Aalto University researchers have access to a secure interface to work with one of the most advanced LLMs (OpenAI’s GPT4). Please note that secret data should still not be used with these external model. The simple rule is that secret data should not be on a computer that has access to the internet. While this might sound paranoid, it is actually a very effective way to work with most sensitive data, and even with “unsafe” software. This is common practice also in infrastructures: you might have a measurement computer that needs to preserve a certain ancient version of an operating system and it cannot be upgraded. The safest option is to completely disconnect it from the internet.</p>
+</section>
+<section id="ethics">
+<h2><span class="section-number">8.3. </span>Ethics<a class="headerlink" href="#ethics" title="Link to this heading">#</a></h2>
+<p>The role of Ethics in research with GenAI can be considered from multiple perspectives.</p>
+<section id="research-ethics-the-principle-of-do-no-harm">
+<h3><span class="section-number">8.3.1. </span>Research ethics: the principle of <em>do no harm</em><a class="headerlink" href="#research-ethics-the-principle-of-do-no-harm" title="Link to this heading">#</a></h3>
+<p>The core principle of research ethics is <em>do no harm</em>. When considering the ethicality of your research, you should evaluate the <em>do no harm</em> principles towards your study participants, yourself, your work place, local and global society, the environment.</p>
+<ul class="simple">
+<li><p><strong>Is the use of AI increasing the risks of harm for the study participants?</strong>
+For example you might be studying a certain ethnical minority, or sub-culture, and the GenAI model might not know the nuances of such culture, and might actually behave in a discriminatory way (racist AI) because of the past data that it has been exposed to. When producing results with AI we should consider if the output was fair and aware of the specific cultural context, without letting it misjudge your study participant</p></li>
+<li><p><strong>Is the use of AI increasing the risks for myself?</strong>
+<em>This is a consideration that is not strictly related to AI, it applies to any tool and platform we use as individuals.</em> Your personal data is also very valuable to companies: data about yourself and also data about how you use online platforms. You often pay with your personal data so that you can use certain platforms: what they can do is legal, but it could be questioned if it is ethical. Depending on the confidentiality of your work, you might not want to use certain system.</p></li>
+<li><p><strong>Is the use of AI impacting the environment?</strong>
+It is estimated that a session with ChatGPT requires about 0.5l of water for the cooling of its computing system. Larger data centers are buing built and it is estimated that the electricity consumption of AI will increase in the order of the <a class="reference external" href="https://www.thedailybeast.com/ai-may-soon-gobble-up-as-much-power-as-sweden-each-year">yearly amount consumed by a country like Sweden</a>. While your usage most likely won’t truly affect these estimate, it is worth considering more sustainable options (e.g. via local LLMs).</p></li>
+</ul>
+</section>
+<section id="ethics-and-ideology">
+<h3><span class="section-number">8.3.2. </span>Ethics and ideology<a class="headerlink" href="#ethics-and-ideology" title="Link to this heading">#</a></h3>
+<p>If we do not strictly consider the research ethics principle of <em>do no harm</em> (direct increase of risks related to research work), we could still consider some ideological aspects in the context of ethics, leaving individuals to decide for themselves if the tool they use is <em>“ethical”</em>.</p>
+<p>The training of LLMs requires a large amount of input data, and – in a latter stage called Reinforcement Learning from Human Feedback (RLHF) – annotated data produced by humans to improve the model output.</p>
+<section id="training-data-ethics">
+<h4><span class="section-number">8.3.2.1. </span>Training data ethics<a class="headerlink" href="#training-data-ethics" title="Link to this heading">#</a></h4>
+<p>It is a known fact that the largest models such as GPT4 needed all the possible data they could get to train the model, and because of that anything that publicly available has been scraped and used to train such models. While you might think that this breaches copyright laws, or just basic ethical principles of reuse of data for profit, the transformative nature of these systems makes it so that they do not actually need to store the data they obtained. So it is like compressing all the information in the plant, without actually being able to “decompress” certain exact specific items of information (although this is currently disputed e.g. between the NYTimes and OpenAI; there are many examples of “training data extraction attacks” link to be added). The AI act will ensure more transparency when it comes to the data sources. For now, the ethical dilemma for the individual is: do you want to use a system that has been built on data that was not explicitly obtained from the data creators?</p>
+</section>
+<section id="rlhf-the-hard-work-of-many-underpaid-individuals">
+<h4><span class="section-number">8.3.2.2. </span>RLHF: the hard work of many underpaid individuals<a class="headerlink" href="#rlhf-the-hard-work-of-many-underpaid-individuals" title="Link to this heading">#</a></h4>
+<p>While large data is necessary to establish an LLM, without the RLHF stage the model would often produce uncorrect answers. Right now the H in RLHF are often people from the Global South, hired with no job security and with minimum pay. It is a grey area: on one hand this can be a great opportunity to provide work to individuals who might not find other work – for example <a class="reference external" href="https://theconversation.com/long-hours-and-low-wages-the-human-labour-powering-ais-development-217038">Finnish prisoners are receiving 1.54eu/hour for doing text labelling</a> –, on the other hand one might wonder that if these companies are accumulating more and more capital, wouldn’t it be more fair to give back to those who contributed to their product? This section can be expanded with more recent links and it should be clear that this text is not taking any political stance. Here an older one from the Guardian: <a class="reference external" href="https://www.theguardian.com/technology/2023/aug/02/ai-chatbot-training-human-toll-content-moderator-meta-openai">“‘It’s destroyed me completely’: Kenyan moderators decry toll of training of AI models (the Guardian)”</a>.</p>
+</section>
+</section>
+<section id="ethics-and-research-integrity">
+<h3><span class="section-number">8.3.3. </span>Ethics and Research Integrity<a class="headerlink" href="#ethics-and-research-integrity" title="Link to this heading">#</a></h3>
+<p>In the context of <a class="reference external" href="https://tenk.fi/en/research-integrity/research-misconduct">Research Integrity and research misconduct</a>, the three things that must be avoided by any researcher are:</p>
+<ol class="arabic simple">
+<li><p>Fabrication: presenting fake observations, research data or results.</p></li>
+<li><p>Falsification: manipulation of research findings, distorted results, omissions.</p></li>
+<li><p>Plagiarism: unacknowledged borrowing, means using someone else’s work or research ideas without permission or reference.</p></li>
+</ol>
+<p>The problem with GenAI is that these tools are the best at fabrication, falsification, and plagiarism! ChatGPT will never say “I do not have an answer”, it will always try to produce convincing text, with some disclaimer added just so they make sure they are not responsible for anything it <em>hallucinates</em>. Furthermore, because it is not possible to directly store exact references that were used in the synthesis of certain text, it is the responsibility of the researcher to make sure that they cannot pass certain claim as their own novel idea, only because ChatGPT was unable to provide a reference. Most likely if ChatGPT generated it, then something very similar already exists somewhere.</p>
+</section>
+<section id="ethics-and-responsible-conduct-of-research">
+<h3><span class="section-number">8.3.4. </span>Ethics and responsible conduct of research<a class="headerlink" href="#ethics-and-responsible-conduct-of-research" title="Link to this heading">#</a></h3>
+<p>While FFP are the core of research misconduct, there are other questionable research practices that fall under the umbrella term of Responsible Conduct of Research. GenAI tools might increase sloppy practices:</p>
+<ol class="arabic simple">
+<li><p>Reproducibility: GenAI tools are inherently stochastic to produce interesting outputs. This undermines the reproducibility of analysis using GenAI tools, or at least requires efforts similar to what is done when estimating “inter-rater agreement”: running multiple time the same queries and identify a summary result.</p></li>
+<li><p>Validity of AI suggestions: GenAI tools were trained with lots of bad science, bad statistics, unreproducible findings. The tool might be recommending a method or an interpretation that has been proved to be wrong, just because statistically there were more “wrong” examples in the training dataset than the correct ones. These type of “biases of AI” are present in all AI systems, and the only solution for this issue is to always critically evaluate its output.</p></li>
+</ol>
+</section>
+</section>
+<section id="further-considerations-on-peer-review-and-publishing-genai-work">
+<h2><span class="section-number">8.4. </span>Further considerations on peer-review and publishing GenAI work<a class="headerlink" href="#further-considerations-on-peer-review-and-publishing-genai-work" title="Link to this heading">#</a></h2>
+<p>This section needs to be expanded, but basically I want to mention</p>
+<ol class="arabic simple">
+<li><p>The nature survey on how GenAI might be increasing productivity of researcher, but shifting the problem to peer reviewers who are even more overloaded than before. <a class="reference external" href="https://www.nature.com/articles/d41586-024-00592-w">“Is ChatGPT making scientists hyper-productive? The highs and lows of using AI”</a>.</p></li>
+<li><p>Journal policies on using AI: AI cannot be a co-author, AI cannot be used for peer review.</p></li>
+<li><p>Transparency on how to cite the use of AI in a paper: journals are starting to recommend including a section called <a class="reference external" href="https://www.sciencedirect.com/journal/artificial-intelligence/publish/guide-for-authors">Declaration of generative AI in scientific writing</a>. <a class="reference external" href="https://www.sciencedirect.com/science/article/pii/S0141813024001247#s0145">Here you can see an example</a>.</p></li>
+</ol>
+</section>
+</section>
+
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="07_fair.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title"><span class="section-number">7. </span>FAIR! Preserve, Share, Reuse</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="09_conclusions.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title"><span class="section-number">9. </span>Conclusions and next steps</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#basics-of-information-security">8.1. Basics of information security</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#law-data-protection-and-cybersecurity">8.2. Law - Data protection and cybersecurity</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ethics">8.3. Ethics</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#research-ethics-the-principle-of-do-no-harm">8.3.1. Research ethics: the principle of <em>do no harm</em></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ethics-and-ideology">8.3.2. Ethics and ideology</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#training-data-ethics">8.3.2.1. Training data ethics</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#rlhf-the-hard-work-of-many-underpaid-individuals">8.3.2.2. RLHF: the hard work of many underpaid individuals</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ethics-and-research-integrity">8.3.3. Ethics and Research Integrity</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ethics-and-responsible-conduct-of-research">8.3.4. Ethics and responsible conduct of research</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#further-considerations-on-peer-review-and-publishing-genai-work">8.4. Further considerations on peer-review and publishing GenAI work</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Enrico Glerean
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2024, Enrico Glerean. Book is distributed under CC-BY-SA license..
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script defer src="_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf"></script>
+<script defer src="_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

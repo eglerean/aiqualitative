@@ -1,0 +1,753 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="./" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>6.1. Content analysis with deductive coding &#8212; AI for Qualitatie Data Analysis</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  <!--
+    this give us a css class that will be invisible only if js is disabled
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=8f2a1f02" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=a3416100" />
+    <link rel="stylesheet" type="text/css" href="_static/css/tweaks.css?v=822f5895" />
+  
+  <!-- So that users can add custom icons -->
+  <script src="_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
+
+    <script src="_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="_static/doctools.js?v=9bcbadda"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = '06_ca_deductive';</script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="6.2. Content analysis with inductive coding" href="06_ca_inductive.html" />
+    <link rel="prev" title="6. Analyse qualitative data" href="06_analyse.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:version" content="" />
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <dialog id="pst-search-dialog">
+    
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         placeholder="Search..."
+         aria-label="Search..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form>
+  </dialog>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+<aside class="bd-header-announcement" aria-label="Announcement">
+  <div class="bd-header-announcement__content">⚠️Work in progress! Help me!⚠️</div>
+</aside>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="index.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="_static/AIforqual.png" class="logo__image only-light" alt="AI for Qualitatie Data Analysis - Home"/>
+    <img src="_static/AIforqual.png" class="logo__image only-dark pst-js-only" alt="AI for Qualitatie Data Analysis - Home"/>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="01_about.html">1. How to use this handboox</a></li>
+<li class="toctree-l1"><a class="reference internal" href="02_background.html">2. Background</a></li>
+<li class="toctree-l1"><a class="reference internal" href="03_plan.html">3. Planning your research</a></li>
+<li class="toctree-l1"><a class="reference internal" href="04_collect.html">4. Data collection</a></li>
+<li class="toctree-l1"><a class="reference internal" href="05_process.html">5. Data pre-processing</a></li>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="06_analyse.html">6. Analyse qualitative data</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">6.1. Content analysis with deductive coding</a></li>
+<li class="toctree-l2"><a class="reference internal" href="06_ca_inductive.html">6.2. Content analysis with inductive coding</a></li>
+<li class="toctree-l2"><a class="reference internal" href="06_tools.html">6.3. Tools and more advanced techniques for qualitative data analysis with AI</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1"><a class="reference internal" href="07_fair.html">7. FAIR! Preserve, Share, Reuse</a></li>
+<li class="toctree-l1"><a class="reference internal" href="08_ethicsandlaw.html">8. Ethics and Law</a></li>
+<li class="toctree-l1"><a class="reference internal" href="09_conclusions.html">9. Conclusions and next steps</a></li>
+<li class="toctree-l1"><a class="reference internal" href="10_contributing_guidelines.html">10. Contributing and community guidelines</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+      <div class="sidebar-primary-item">
+<div id="ethical-ad-placement"
+      class="flat"
+      data-ea-publisher="readthedocs"
+      data-ea-type="readthedocs-sidebar"
+      data-ea-manual="true">
+</div></div>
+  </div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/eglerean/aiqualitative/blob/main/doc/06_ca_deductive.md?plain=1" target="_blank"
+   class="btn btn-sm btn-source-file-button dropdown-item"
+   title="Show source"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-code"></i>
+  </span>
+<span class="btn__text-container">Show source</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/eglerean/aiqualitative/edit/main/doc/06_ca_deductive.md" target="_blank"
+   class="btn btn-sm btn-source-edit-button dropdown-item"
+   title="Suggest edit"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-pencil-alt"></i>
+  </span>
+<span class="btn__text-container">Suggest edit</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/eglerean/aiqualitative/issues/new?title=Issue%20on%20page%20%2F06_ca_deductive.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="_sources/06_ca_deductive.md" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.md</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button>
+
+
+<button class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+</button>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Content analysis with deductive coding</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#summary">6.1.1. Summary</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="content-analysis-with-deductive-coding">
+<h1><span class="section-number">6.1. </span>Content analysis with deductive coding<a class="headerlink" href="#content-analysis-with-deductive-coding" title="Link to this heading">#</a></h1>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>This page needs expanding on the background of the method. For now it jumps directly into an example</p>
+</div>
+<div class="dropdown admonition">
+<p class="admonition-title">Survey data for this example</p>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Name Surname</p></th>
+<th class="head"><p>Background of the Individual: Age, Occupation, Sex, Self Description of How Their Personality Is</p></th>
+<th class="head"><p>Answer to Question 1</p></th>
+<th class="head"><p>Answer to Question 2</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>John Doe</p></td>
+<td><p>53, Accountant, Male, Introverted and analytical</p></td>
+<td><p>“I found the movie quite touching, especially the scenes involving Forrest’s childhood. It wasn’t my first time seeing it, but the emotional impact remains strong. I particularly connected with the protagonist’s perseverance.”</p></td>
+<td><p>“The eye-tracking device was a bit distracting at first, but I got used to it. It didn’t significantly alter my viewing experience.”</p></td>
+</tr>
+<tr class="row-odd"><td><p>Emily Stone</p></td>
+<td><p>22, University Student, Female, Extroverted and enjoys comedy</p></td>
+<td><p>“This was my first time watching “Forrest Gump.” I thought it would be purely comedic, but it was surprisingly emotional too. I laughed a lot, especially during Forrest’s accidental achievements.”</p></td>
+<td><p>“I found the device comfortable enough, though I was aware of it during funny scenes which made me lose focus occasionally.”</p></td>
+</tr>
+<tr class="row-even"><td><p>Michael Rivera</p></td>
+<td><p>28, Graduate Student, Male, Cynical and prefers intense dramas</p></td>
+<td><p>“I’ve seen the movie several times. It feels a bit slow and predictable at this point. However, the historical references are interesting.”</p></td>
+<td><p>“The device was fine. I hardly noticed it after a while, which allowed me to focus more on the details of the film.”</p></td>
+</tr>
+<tr class="row-odd"><td><p>Lisa Chang</p></td>
+<td><p>50, Nurse, Female, Empathetic and values emotional storytelling</p></td>
+<td><p>“I’ve always found ‘Forrest Gump’ deeply moving. The movie’s exploration of destiny and love always brings me to tears, especially the scenes with Jenny.”</p></td>
+<td><p>“The eye-tracking device was slightly uncomfortable at the beginning, but it didn’t detract from the powerful moments of the movie.”</p></td>
+</tr>
+<tr class="row-even"><td><p>Alex Johnson</p></td>
+<td><p>19, University Student, Male, Enjoys fast-paced movies, first-time viewer</p></td>
+<td><p>“I thought the movie would be boring but was pleasantly surprised by its depth and the complexity of Forrest’s character. It was funny, but also made me think.”</p></td>
+<td><p>“Using the eye-tracking device was interesting. It felt a bit weird at first, but it didn’t bother me much as the movie went on.”</p></td>
+</tr>
+<tr class="row-odd"><td><p>Sarah Bennett</p></td>
+<td><p>32, Marketing Manager, Female, Creative and empathetic</p></td>
+<td><p>“Watching ‘Forrest Gump’ always brings a mix of laughter and tears. The narrative complexity and emotional depth resonate with me every time, especially Forrest’s unwavering kindness.”</p></td>
+<td><p>“The eye-tracking device was slightly intrusive initially, but I forgot about it once I got absorbed in the story.”</p></td>
+</tr>
+<tr class="row-even"><td><p>Darren Smith</p></td>
+<td><p>45, Engineer, Male, Pragmatic and reserved</p></td>
+<td><p>“I’ve seen ‘Forrest Gump’ multiple times. It’s a fine movie, though not my favorite. I appreciate the technical execution and historical context more than the emotional aspects.”</p></td>
+<td><p>“The device was comfortable and didn’t interfere with my viewing experience, allowing me to appreciate the cinematography.”</p></td>
+</tr>
+<tr class="row-odd"><td><p>Olivia Martinez</p></td>
+<td><p>27, PhD Candidate, Female, Analytical and introverted</p></td>
+<td><p>“This was my first viewing of the movie. The emotional arcs were engaging, and I enjoyed analyzing the lead character’s development throughout the different eras.”</p></td>
+<td><p>“I was aware of the eye-tracking device at all times, which made me somewhat conscious of how often my gaze shifted during intense scenes.”</p></td>
+</tr>
+<tr class="row-even"><td><p>Ethan Wright</p></td>
+<td><p>35, Freelance Writer, Male, Thoughtful and enjoys drama</p></td>
+<td><p>“Forrest Gump is a movie that I find humorously tragic. The stark contrast between the protagonist’s simplicity and the complex events around him is striking. It was enjoyable revisiting it.”</p></td>
+<td><p>“The device was a minor distraction initially, but it became less noticeable as the movie progressed.”</p></td>
+</tr>
+<tr class="row-odd"><td><p>Grace Kim</p></td>
+<td><p>24, University Student, Female, Curious and loves exploring different genres</p></td>
+<td><p>“I hadn’t watched ‘Forrest Gump’ before. It was fascinating to see a character go through so many historical events. The blend of humor and drama was captivating.”</p></td>
+<td><p>“I found the eye-tracking device intriguing to use. It was a bit uncomfortable at first, but it added an experimental aspect to my movie experience.”</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<p>We make sure that the context is clear and ask ChatGPT to perform content analysis with deductive coding.</p>
+<blockquote>
+<div><p><strong>You</strong>
+You are a helpful research assistant expert in content analysis for qualitative research. I have collected survey data and I am pasting here as a table in text format.
+– Here goes the table above –
+I want to perform deductive coding based on a code book: for question one the code book are the basic emotions words; for question two the code book is simply positive neutral negative to summarise the experience with the eye tracking device. Proceed with the deductive coding analysis.</p>
+</div></blockquote>
+<blockquote>
+<div><p><strong>ChatGPT</strong>
+Deductive coding involves applying a predefined set of codes to the data, which in this case includes basic emotion words for responses to the movie “Forrest Gump” and categorizing the experience with the eye-tracking device as positive, neutral, or negative. Let’s proceed with this coding method for the 10 synthetic subjects using the information provided earlier.</p>
+<p><strong>Deductive Coding Process:</strong></p>
+<ol class="arabic simple">
+<li><p><strong>Review the Data:</strong> Examine each participant’s responses to ensure understanding and proper application of the code book.</p></li>
+<li><p><strong>Apply the Codes:</strong> Use the predetermined codes to classify each response.</p></li>
+<li><p><strong>Compile the Results:</strong> Organize the codes into a table to show the distribution of emotional responses and experiences with the device.</p></li>
+</ol>
+<p><strong>Deductive Coding Analysis:</strong></p>
+<p><strong>Code Book for Question 1 (Emotions):</strong></p>
+<ul class="simple">
+<li><p><strong>Happiness, Sadness, Surprise, Fear, Disgust, Anger</strong></p></li>
+</ul>
+<p><strong>Code Book for Question 2 (Experience with Device):</strong></p>
+<ul class="simple">
+<li><p><strong>Positive, Neutral, Negative</strong></p></li>
+</ul>
+<p><strong>Coding Results Table:</strong></p>
+</div></blockquote>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Name Surname</p></th>
+<th class="head"><p>Basic Emotion Words from Q1</p></th>
+<th class="head"><p>Experience with Eye-Tracking Device (Q2)</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>John Doe</p></td>
+<td><p>Sadness, Surprise</p></td>
+<td><p>Neutral</p></td>
+</tr>
+<tr class="row-odd"><td><p>Emily Stone</p></td>
+<td><p>Happiness, Surprise</p></td>
+<td><p>Neutral</p></td>
+</tr>
+<tr class="row-even"><td><p>Michael Rivera</p></td>
+<td><p>Neutral</p></td>
+<td><p>Neutral</p></td>
+</tr>
+<tr class="row-odd"><td><p>Lisa Chang</p></td>
+<td><p>Sadness, Happiness</p></td>
+<td><p>Neutral</p></td>
+</tr>
+<tr class="row-even"><td><p>Alex Johnson</p></td>
+<td><p>Surprise, Happiness</p></td>
+<td><p>Neutral</p></td>
+</tr>
+<tr class="row-odd"><td><p>Sarah Bennett</p></td>
+<td><p>Sadness, Happiness</p></td>
+<td><p>Neutral</p></td>
+</tr>
+<tr class="row-even"><td><p>Darren Smith</p></td>
+<td><p>Neutral</p></td>
+<td><p>Positive</p></td>
+</tr>
+<tr class="row-odd"><td><p>Olivia Martinez</p></td>
+<td><p>Sadness</p></td>
+<td><p>Negative</p></td>
+</tr>
+<tr class="row-even"><td><p>Ethan Wright</p></td>
+<td><p>Sadness, Happiness</p></td>
+<td><p>Positive</p></td>
+</tr>
+<tr class="row-odd"><td><p>Grace Kim</p></td>
+<td><p>Happiness, Surprise</p></td>
+<td><p>Neutral</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<blockquote>
+<div><p><strong>Explanation of Codes:</strong></p>
+<ol class="arabic simple">
+<li><p><strong>Basic Emotions Words for Q1:</strong> Each response was reviewed for mentions or implications of basic emotions such as happiness (amusement, joy), sadness (sorrow, melancholy), surprise (shock, unexpected pleasure), etc. These emotions were coded according to the most prominent emotions expressed about the movie.</p></li>
+<li><p><strong>Experience with the Eye-Tracking Device for Q2:</strong> The overall sentiment expressed about the eye-tracking device was coded as:</p></li>
+</ol>
+<ul class="simple">
+<li><p><strong>Positive:</strong> If the participant reported a beneficial or negligible impact on their viewing experience.</p></li>
+<li><p><strong>Neutral:</strong> If the participant noted some initial distractions or minor discomforts that did not majorly impact the viewing experience.</p></li>
+<li><p><strong>Negative:</strong> If the participant felt the device continuously interfered with or diminished the viewing experience.</p></li>
+</ul>
+<p><strong>Conclusion:</strong></p>
+<p>This table provides a structured view of how participants’ responses align with the predefined codes based on their emotions and their experiences with the technology. This method of deductive coding helps in quickly identifying patterns and differences across responses based on the specified criteria, which is particularly useful in studies where the research questions and the theoretical framework are clearly defined in advance. This approach is less exploratory than inductive coding and focuses on testing existing theories or hypotheses.</p>
+</div></blockquote>
+<p>We now want to produce some result tables to summarise the analysis.</p>
+<p>Rather than immediately asking to analyise the data, I first make sure that it knows what should be done</p>
+<blockquote>
+<div><p><strong>You</strong>
+With the analysis the data was expanded into more columns. What is the best way to proceed after the deductive coding analysis?</p>
+</div></blockquote>
+<blockquote>
+<div><p><strong>ChatGPT</strong>
+<em>…long output omitted, but basically it was a list of various options and then I picked one from the list…</em></p>
+</div></blockquote>
+<blockquote>
+<div><p><strong>You</strong>
+Compute a frequency analysis and cross tabulation</p>
+</div></blockquote>
+<blockquote>
+<div><p><strong>ChatGPT</strong>
+To perform a frequency analysis and cross-tabulation based on the deductive coding results provided earlier, we first need to organize the coded data into a format suitable for analysis. The coding results are based on the basic emotion words for responses to “Forrest Gump” and the experience categories (positive, neutral, negative) for using the eye-tracking device.</p>
+<p class="rubric" id="step-1-frequency-analysis">Step 1: Frequency Analysis</p>
+<p>We’ll calculate the frequency of each category in both the emotional responses and the experiences with the eye-tracking device.</p>
+<p><strong>Frequency of Basic Emotion Words (Question 1):</strong></p>
+<ul class="simple">
+<li><p><strong>Happiness</strong></p></li>
+<li><p><strong>Sadness</strong></p></li>
+<li><p><strong>Surprise</strong></p></li>
+<li><p><strong>Neutral</strong> (where no specific emotion was strongly indicated)</p></li>
+</ul>
+<p><strong>Frequency of Experience with Eye-Tracking Device (Question 2):</strong></p>
+<ul class="simple">
+<li><p><strong>Positive</strong></p></li>
+<li><p><strong>Neutral</strong></p></li>
+<li><p><strong>Negative</strong></p></li>
+</ul>
+<p>Let’s assume each participant expressed one predominant emotion for simplicity.</p>
+<p class="rubric" id="step-2-cross-tabulation">Step 2: Cross-Tabulation</p>
+<p>Cross-tabulation will involve comparing the relationship between the types of emotional responses (basic emotions) and the experience with the eye-tracking device (positive, neutral, negative). This will help identify any patterns, such as whether a certain type of emotional reaction correlates with a specific experience with the technology.</p>
+<p class="rubric" id="data-set-up-and-computation">Data Set Up and Computation</p>
+<p>Based on the synthetic data provided in my previous messages, here is how we might structure and compute these analyses:</p>
+<p class="rubric" id="frequency-of-basic-emotion-words">Frequency of Basic Emotion Words:</p>
+<ul class="simple">
+<li><p><strong>Happiness:</strong> 6</p></li>
+<li><p><strong>Sadness:</strong> 6</p></li>
+<li><p><strong>Surprise:</strong> 4</p></li>
+<li><p><strong>Neutral:</strong> 2</p></li>
+</ul>
+<p class="rubric" id="frequency-of-experience-with-device">Frequency of Experience with Device:</p>
+<ul class="simple">
+<li><p><strong>Positive:</strong> 2</p></li>
+<li><p><strong>Neutral:</strong> 7</p></li>
+<li><p><strong>Negative:</strong> 1</p></li>
+</ul>
+<p class="rubric" id="cross-tabulation-matrix-example">Cross-Tabulation Matrix Example:</p>
+</div></blockquote>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p></p></th>
+<th class="head"><p>Positive</p></th>
+<th class="head"><p>Neutral</p></th>
+<th class="head"><p>Negative</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><strong>Happiness</strong></p></td>
+<td><p>1</p></td>
+<td><p>4</p></td>
+<td><p>1</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>Sadness</strong></p></td>
+<td><p>1</p></td>
+<td><p>4</p></td>
+<td><p>1</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>Surprise</strong></p></td>
+<td><p>0</p></td>
+<td><p>4</p></td>
+<td><p>0</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>Neutral</strong></p></td>
+<td><p>0</p></td>
+<td><p>1</p></td>
+<td><p>1</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<blockquote>
+<div><p class="rubric" id="explanation">Explanation:</p>
+<p>This matrix shows how each type of emotional response correlates with each type of experience using the eye-tracking device. For example, participants who felt happiness predominantly had a neutral experience with the device.</p>
+<p class="rubric" id="next-steps">Next Steps:</p>
+<ol class="arabic simple">
+<li><p><strong>Analysis Interpretation:</strong> Interpret the cross-tabulation to understand the relationships between emotional responses and technological experiences. For example, whether sadder or happier participants felt more or less comfortable with the device.</p></li>
+<li><p><strong>Statistical Testing:</strong> Depending on the research question, you might apply statistical tests (like Chi-Square Test) to see if the distributions are statistically significant.</p></li>
+<li><p><strong>Report Findings:</strong> Summarize the findings in a report or presentation, highlighting the key correlations and their implications for the use of eye-tracking in emotional film viewing contexts.</p></li>
+</ol>
+<p>This structured approach to frequency analysis and cross-tabulation provides a clear way to understand the impact of the eye-tracking device on participants’ movie-watching experiences, aligned with their emotional reactions.</p>
+</div></blockquote>
+<section id="summary">
+<h2><span class="section-number">6.1.1. </span>Summary<a class="headerlink" href="#summary" title="Link to this heading">#</a></h2>
+<p>We saw how ChatGPT worked with content analysis. This was ok for the small amount of data we have in our study, but if we have thousands of responses, it would have been much more cumbersome to work with the data and we might reach the limitation of the “window” of ChatGPT, i.e. how much of the conversation the model can keep in its memory. In the tools section we mention some ways to overcome this.</p>
+</section>
+</section>
+
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="06_analyse.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title"><span class="section-number">6. </span>Analyse qualitative data</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="06_ca_inductive.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title"><span class="section-number">6.2. </span>Content analysis with inductive coding</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#summary">6.1.1. Summary</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Enrico Glerean
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2024, Enrico Glerean. Book is distributed under CC-BY-SA license..
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script defer src="_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf"></script>
+<script defer src="_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
